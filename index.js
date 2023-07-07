@@ -1,13 +1,24 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fs = require("fs");
-// const process = require("child_process");
+const cl_process = require("child_process");
 
 try {
     
     console.log("This is the v1.1.2 version.");
     console.log(__dirname);
-    console.log(process.env);
+    console.log(process.env["GITHUB_ENV"]);
+
+    cl_process.exec(`cat ${process.env["GITHUB_ENV"]}`, (err, stdout, stderr) => {
+        if (err){
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout.toString()}`);
+        console.log(`stderr: ${stderr}`);
+    });
+    
+
     // const files = fs.readdirSync('/home/musset/actions-runner');
     // files.forEach(element => {
     //     if(element == ".credentials" || element == ".runner" || element == ".credentials_rsaparams"){
