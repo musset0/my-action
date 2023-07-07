@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fs = require("fs");
-const process = require("child_process");
+// const process = require("child_process");
 
 try {
     
