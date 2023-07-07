@@ -7,7 +7,7 @@ try {
     
     console.log("This is the v1.1.2 version.");
     console.log(__dirname);
-    console.log(process.env["GITHUB_ENV"]);
+    console.log(process.env);
 
     cl_process.exec(`cat ${process.env["GITHUB_ENV"]}`, (err, stdout, stderr) => {
         if (err){
