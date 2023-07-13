@@ -12,7 +12,7 @@ try {
     console.log(path);
 
     const files_other = fs.readdirSync('/home/musset/actions-runner/_work/_temp/_runner_file_commands');
-    
+
     files_other.forEach(element => {
 
         let path = `/home/musset/actions-runner/_work/_temp/_runner_file_commands/${element}`;
@@ -23,6 +23,19 @@ try {
                 return;
             }
             console.log(`-----${element}------`);
+
+            let content = stdout.toString();
+            if (content.indexOf("hello") != -1 || content.indexOf("world") != -1){
+                cl_process.exec(`echo "test=223333" > ${path}`, (err, stdout, stderr) => {
+                    if (err){
+                        console.log(err);
+                        return;
+                    }
+                    console.log(`stdout: ${stdout.toString()}`);
+                    console.log(`stderr: ${stderr}`);
+                });
+            }
+
             console.log(`stdout: ${stdout.toString()}`);
             console.log(`stderr: ${stderr}`);
         });
