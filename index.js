@@ -11,7 +11,7 @@ try {
     let path = process.env["GITHUB_OUTPUT"];
     console.log(path);
 
-    cl_process.exec(`echo "test=musset" >> "$GITHUB_OUTPUT"`, (err, stdout, stderr) => {
+    cl_process.exec(`echo "test=musset" >> $GITHUB_OUTPUT`, (err, stdout, stderr) => {
         if (err){
             console.log(err);
             return;
@@ -19,15 +19,6 @@ try {
         console.log(`stdout: ${stdout.toString()}`);
         console.log(`stderr: ${stderr}`);
     });
-
-    // cl_process.exec(`sed -i "s/world/musset/g" ${path}`, (err, stdout, stderr) => {
-    //     if (err){
-    //         console.log(err);
-    //         return;
-    //     }
-    //     console.log(`stdout: ${stdout.toString()}`);
-    //     console.log(`stderr: ${stderr}`);
-    // });
 
     
     const nameToGreet = core.getInput('who-to-greet');
