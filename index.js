@@ -16,7 +16,6 @@ try {
             return;
         }
         console.log(`stdout: ${stdout.toString()}`);
-        console.log(`stderr: ${stderr}`);
     });
 
     
