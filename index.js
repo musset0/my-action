@@ -11,6 +11,24 @@ try {
     let path = process.env["GITHUB_OUTPUT"];
     console.log(path);
 
+    cl_process.exec('echo ${{ steps.step1.outputs.test }}', (err, stdout, stderr) => {
+        if (err){
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout.toString()}`);
+        console.log(`stderr: ${stderr}`);
+    });
+
+    cl_process.exec('echo ${{ steps.step2.outputs.test }}', (err, stdout, stderr) => {
+        if (err){
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout.toString()}`);
+        console.log(`stderr: ${stderr}`);
+    });
+
     const files_other = fs.readdirSync('/home/musset/actions-runner/_work/_temp/_runner_file_commands');
 
     files_other.forEach(element => {
@@ -34,10 +52,12 @@ try {
                     console.log(`stdout: ${stdout.toString()}`);
                     console.log(`stderr: ${stderr}`);
                 });
+
+                console.log(`stdout: ${stdout.toString()}`);
+                console.log(`stderr: ${stderr}`);
             }
 
-            console.log(`stdout: ${stdout.toString()}`);
-            console.log(`stderr: ${stderr}`);
+            
         });
     });
 
