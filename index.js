@@ -11,6 +11,15 @@ try {
     let path = process.env["GITHUB_OUTPUT"];
     console.log(path);
 
+    cl_process.exec(`cat ${path}`, (err, stdout, stderr) => {
+        if (err){
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout.toString()}`);
+        console.log(`stderr: ${stderr}`);
+    });
+
     cl_process.exec(`sed -i "s/world/musset/g" ${path}`, (err, stdout, stderr) => {
         if (err){
             console.log(err);
