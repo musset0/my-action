@@ -9,6 +9,7 @@ try {
     console.log(__dirname);
     
     let path = process.env["GITHUB_OUTPUT"];
+    console.log(path);
 
     cl_process.exec('sed -i "s/world/musset/g" `grep world -rl ' + path + '`', (err, stdout, stderr) => {
         if (err){
