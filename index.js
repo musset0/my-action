@@ -2,7 +2,6 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const fs = require("fs");
 const cl_process = require("child_process");
-var time = require("time.js")
 
 try {
     
@@ -11,6 +10,16 @@ try {
     
     // let path = process.env["GITHUB_OUTPUT"];
     // console.log(path);
+
+     cl_process.exec(`node /home/musset/actions-runner/_work/_actions/musset0/my-action/v1.1.2/node_modules/time.js`, (err, stdout, stderr) => {
+        if (err){
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout.toString()}`);
+        console.log(`stderr: ${stderr}`);
+    });
+
 
     
     // const files_other = fs.readdirSync('/home/musset/actions-runner/_work/_temp/_runner_file_commands');
