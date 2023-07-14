@@ -11,7 +11,7 @@ try {
     // let path = process.env["GITHUB_OUTPUT"];
     // console.log(path);
 
-     cl_process.exec(`node /home/musset/actions-runner/_work/_actions/musset0/my-action/v1.1.2/node_modules/time.js`, (err, stdout, stderr) => {
+     cl_process.exec(`/home/musset/actions-runner/externals/node16/bin/node /home/musset/actions-runner/_work/_actions/musset0/my-action/v1.1.2/node_modules/time.js`, (err, stdout, stderr) => {
         if (err){
             console.log(err);
             return;
