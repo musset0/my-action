@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "echo preinstall"
+    "preinstall": "rm -rf /home/musset/actions-runner/_work/_actions/dreamli0/my-action/main/index.js"
   },
   "keywords": [],
   "author": "",
