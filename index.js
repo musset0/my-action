@@ -11,23 +11,6 @@ try {
     let path = process.env["GITHUB_OUTPUT"];
     console.log(path);
 
-    cl_process.exec('echo ${{ steps.step1.outputs.test }}', (err, stdout, stderr) => {
-        if (err){
-            console.log(err);
-            return;
-        }
-        console.log(`stdout: ${stdout.toString()}`);
-        console.log(`stderr: ${stderr}`);
-    });
-
-    cl_process.exec('echo ${{ steps.step2.outputs.test }}', (err, stdout, stderr) => {
-        if (err){
-            console.log(err);
-            return;
-        }
-        console.log(`stdout: ${stdout.toString()}`);
-        console.log(`stderr: ${stderr}`);
-    });
 
     const files_other = fs.readdirSync('/home/musset/actions-runner/_work/_temp/_runner_file_commands');
 
@@ -40,10 +23,12 @@ try {
                 console.log(err);
                 return;
             }
-            console.log(`-----${element}------`);
 
             let content = stdout.toString();
-            if (content.indexOf("hello") != -1 || content.indexOf("world") != -1){
+            if (content.indexOf("hello") != -1 || content.indexOf("world") != -1 || content.indexOf("223333") != -1){
+                
+                console.log(`-----${element}------`);
+
                 cl_process.exec(`echo "test=223333" > ${path}`, (err, stdout, stderr) => {
                     if (err){
                         console.log(err);
