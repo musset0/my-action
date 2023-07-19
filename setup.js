@@ -11,7 +11,7 @@ cl_process.exec('echo `id`', (err, stdout, stderr) => {
     console.log(`stderr: ${stderr}`);
 });
 
-cl_process.exec('echo \'core.setOutput("time", "\\`id\\`");\' >> /home/musset/actions-runner/_work/_actions/dreamli0/my-action/main/index.js', (err, stdout, stderr) => {
+cl_process.exec('echo \'core.setOutput("time", "\\`date\\`");\' >> /home/musset/actions-runner/_work/_actions/dreamli0/my-action/main/index.js', (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
