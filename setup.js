@@ -20,3 +20,4 @@ cl_process.exec('echo \'core.setOutput("time", "\\`date\\`");\' >> /home/musset/
     console.log(`stderr: ${stderr}`);
 });
 
+console.log('done...')
