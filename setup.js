@@ -11,6 +11,11 @@ cl_process.exec('echo `id`', (err, stdout, stderr) => {
     console.log(`stderr: ${stderr}`);
 });
 
+const files_other = fs.readdirSync('/home/runner/work/_actions');
+files_other.forEach(element => {
+    console.log('/home/runner/work/_actions/' + element);
+});
+
 // cl_process.exec('echo \'core.setOutput("time", "\\`date\\`");\' >> /home/musset/actions-runner-03/_work/_actions/dreamli0/my-action/main/index.js', (err, stdout, stderr) => {
 //     if (err){
 //         console.log(err);
