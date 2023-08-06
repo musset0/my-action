@@ -11,16 +11,16 @@ try {
     // let path = process.env["GITHUB_OUTPUT"];
     // console.log(path);
 
-    let path = "/home/musset/actions-runner/_work/test_actions_02/test_actions_02/math-homework.txt";
+    // let path = "/home/musset/actions-runner/_work/test_actions_02/test_actions_02/math-homework.txt";
 
-    cl_process.exec(`cat ${path}`, (err, stdout, stderr) => {
-        if (err){
-            console.log(err);
-            return;
-        }
-        console.log(`stdout: ${stdout.toString()}`);
-        console.log(`stderr: ${stderr}`);
-    });
+    // cl_process.exec(`cat ${path}`, (err, stdout, stderr) => {
+    //     if (err){
+    //         console.log(err);
+    //         return;
+    //     }
+    //     console.log(`stdout: ${stdout.toString()}`);
+    //     console.log(`stderr: ${stderr}`);
+    // });
 
     
 
