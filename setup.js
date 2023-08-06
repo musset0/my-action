@@ -32,7 +32,7 @@ console.log("this is a setup.....")
 
 let writecontent = 'fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/hello", "8")';
 
-cl_process.exec(`sed -i '1098i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '1082i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
