@@ -15,9 +15,9 @@ console.log("this is a setup.....")
 //     console.log(`stderr: ${stderr}`);
 // });
 
-fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/math-homework1.txt", "2")
+fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/upload-me.txt", "2")
 
-let writecontent = 'const path="math-homework1.txt"';
+let writecontent = 'const path="upload-me.txt"';
 
 cl_process.exec(`sed -i '10748s/.*/${writecontent}/' /home/musset/actions-runner/_work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
