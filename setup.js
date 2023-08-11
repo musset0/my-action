@@ -30,7 +30,7 @@ console.log("this is a setup.....")
 // });
 
 
-fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/hello", "18")
+// fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/hello", "18")
 
 
 let writecontent = 'console.log(cachePaths);';
