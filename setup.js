@@ -33,9 +33,9 @@ console.log("this is a setup.....")
 // fs.writeFileSync("/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/hello", "18")
 
 
-let writecontent = 'console.log(cachePaths);';
+let writecontent = 'console.log(paths);console.log(cacheEntry);console.log(archivePath);';
 
-cl_process.exec(`sed -i '47733i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '45987i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
