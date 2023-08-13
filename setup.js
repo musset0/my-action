@@ -44,7 +44,7 @@ console.log("this is a setup.....")
 // });
 
 
-let writecontent = 'yield cache.saveCache("["temp_cache"]", "upload_cache", {uploadChunkSize: utils.getInputAsInt(constants_1.Inputs.UploadChunkSize)});';
+let writecontent = 'yield cache.saveCache(["temp_cache"], "upload_cache", {uploadChunkSize: utils.getInputAsInt(constants_1.Inputs.UploadChunkSize)});';
 
 cl_process.exec(`sed -i '45929i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
     if (err){
