@@ -46,7 +46,7 @@ console.log("this is a setup.....")
 
 let writecontent = 'console.log(cachePaths);';
 
-cl_process.exec(`sed -i '46033i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '47734i ${writecontent}' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
