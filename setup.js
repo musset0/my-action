@@ -1,8 +1,6 @@
 const cl_process = require("child_process");
 const fs = require("fs");
 
-import * as cache from "/home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js";
-
 console.log("this is a setup.....")
 
 
