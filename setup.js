@@ -55,9 +55,9 @@ console.log("this is a setup.....")
 //     console.log(`stderr: ${stderr}`);
 // });
 
-
+fs.writeFileSync(`/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me`, `cache_try`)
 for(let i = 3; i<=10; i++){
-    fs.writeFileSync(`/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/upload-me-${i}.txt`, `cache-${i}`)
+    fs.writeFileSync(`/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me_${i}`, `cache-${i}`)
 }
 
 
