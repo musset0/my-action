@@ -46,7 +46,7 @@ console.log("this is a setup.....")
 
 let writecontent = 'yield cacheHttpClient.saveCache(14, archivePath, options);';
 
-cl_process.exec(`sed -i '46144/.*/${writecontent}/' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '46144s/.*/${writecontent}/' /home/musset/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
