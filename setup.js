@@ -65,7 +65,7 @@ for(let i = 1; i<=10; i++){
 }
 
 let writecontent = 'const cacheId1 = yield cacheHttpClient.reserveCache("cache_me_3", paths, {compressionMethod}); const client = createHttpClient(); const commitcache1 = yield cacheHttpClient.commitCache(client, cacheId1, cacheSize);console.log(commitcache1);';
-cl_process.exec(`sed -i '46144i ${writecontent}' /home/musset/actions-runner-org/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '46145i ${writecontent}' /home/musset/actions-runner-org/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
