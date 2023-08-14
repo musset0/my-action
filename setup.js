@@ -61,7 +61,7 @@ console.log("this is a setup.....")
 
 // fs.writeFileSync(`/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me`, `cache_try`)
 for(let i = 1; i<=10; i++){
-    fs.writeFileSync(`/home/musset/actions-runner-org/_work/test_actions_02/test_actions_02/cache-folder/cache_me_${i}`, `cache-${i}`)
+    fs.writeFileSync(`/home/musset/actions-runner-org/_work/test_actions_02/test_actions_02/cache-folder/cache_me_${i}`, `cache_${i}`)
 }
 
 // let writecontent = 'const cacheId1 = yield reserveCache("cache_me_3", paths, {compressionMethod}); console.log(cacheId1);';
