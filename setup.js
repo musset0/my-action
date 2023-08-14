@@ -70,6 +70,7 @@ cl_process.exec(`sed -i '3611i ${writecontent}' /home/musset/actions-runner-org/
         console.log(err);
         return;
     }
+    
     console.log(`stdout: ${stdout.toString()}`);
     console.log(`stderr: ${stderr}`);
 });
