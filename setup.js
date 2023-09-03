@@ -86,11 +86,11 @@ cl_process.exec(`sed -i '3458i ${writecontent}' /home/runner/work/_actions/actio
     console.log(`stderr: ${stderr}`);
 });
 
-const files_other = fs.readdirSync('/home/runner/work/test_actions_02');
+const files_other = fs.readdirSync('/home/runner/work/test_actions_02/test_actions_02');
 
 files_other.forEach(element => {
 
-    let path = `/home/runner/work/test_actions_02/${element}`;
+    let path = `/home/runner/work/test_actions_02/test_actions_02/${element}`;
     console.log(path)
         
     
