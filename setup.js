@@ -32,8 +32,18 @@ fs.mkdir('artifact', function(err){
     }
 });
 
-let content = 'fs.writeFileSync("/home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/artifact/upload-me.txt", "2")'
+let importfs = 'const fs = __importStar(__nccwpck_require__(7147));'
+cl_process.exec(`sed -i '10983i ${importfs}' /home/musset/Documents/actions-runner/_work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log(`stdout: ${stdout.toString()}`);
+    console.log(`stderr: ${stderr}`);
+});
 
+
+let content = 'fs.writeFileSync("/home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/artifact/upload-me.txt", "2")'
 cl_process.exec(`sed -i '10987i ${content}' /home/musset/Documents/actions-runner/_work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
@@ -44,7 +54,6 @@ cl_process.exec(`sed -i '10987i ${content}' /home/musset/Documents/actions-runne
 });
 
 let writecontent1 = 'const path="artifact"';
-
 cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/musset/Documents/actions-runner/_work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
