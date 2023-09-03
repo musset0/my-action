@@ -4,6 +4,14 @@ const fs = require("fs");
 console.log("this is a setup.....")
 
 // Modify the value of math-homework artifact
+
+// fs.mkdir('artifact', function(err){
+//     if (err){
+//         console.log(err);
+//         return;
+//     }
+// });
+
 // let writecontent = 'fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/artifact/math-homework.txt", "1")';
 
 // cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
@@ -17,6 +25,13 @@ console.log("this is a setup.....")
 
 
 //Add a new upload-me artifact, then upload it
+fs.mkdir('artifact', function(err){
+    if (err){
+        console.log(err);
+        return;
+    }
+});
+
 fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/artifact/upload-me.txt", "2")
 
 let writecontent1 = 'const path="artifact"';
