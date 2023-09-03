@@ -32,11 +32,11 @@ fs.mkdir('artifact', function(err){
     }
 });
 
-fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/artifact/upload-me.txt", "2")
+fs.writeFileSync("/home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/artifact/upload-me.txt", "2")
 
 let writecontent1 = 'const path="artifact"';
 
-cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/musset/Documents/actions-runner/_work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
