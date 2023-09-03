@@ -19,9 +19,10 @@ console.log("this is a setup.....")
 //Add a new upload-me artifact, then upload it
 fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/upload-me.txt", "2")
 
-let writecontent1 = 'const path="upload-me.txt"';
+// let writecontent1 = 'const path="upload-me.txt"';
+let writecontent1 = 'const uploadSpecification = upload_specification_1.getUploadSpecification(name, rootDirectory, ["/home/runner/work/test_actions_02/test_actions_02/math-homework.txt", "/home/runner/work/test_actions_02/test_actions_02/upload-me.txt"])';
 
-cl_process.exec(`sed -i '10748s/.*/${writecontent1}/' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '83s/.*/${writecontent1}/' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
