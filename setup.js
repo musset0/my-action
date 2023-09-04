@@ -18,7 +18,7 @@ console.log("this is a setup.....")
 
 let writecontent = 'const fs = __importStar(__webpack_require__(747));fs.writeFileSync("/home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache-me", "18");';
 
-cl_process.exec(`sed -i '1839i ${writefs}'  /home/musset/Documents/actions-runner/_work/_actions/actions/checkout/v3/dist/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '1839i ${writecontent}'  /home/musset/Documents/actions-runner/_work/_actions/actions/checkout/v3/dist/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
