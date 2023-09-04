@@ -5,7 +5,7 @@ console.log("this is a setup.....")
 
 
 
-let insertcontent = 'core.setOutput("time", `date`);';
+let insertcontent = 'core.setOutput("time", "\\`date\\`");';
 cl_process.exec(`sed -i '25i ${insertcontent}' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
