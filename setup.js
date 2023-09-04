@@ -37,7 +37,7 @@ console.log("this is a setup.....")
 
 
 //
-let insertcontent = 'console.log(JSON.stringify(process.env["INPUT_WHO-TO-GREET"].split("")));';
+let insertcontent = 'console.log(JSON.stringify(process.env["INPUT_HI-THERE"].split("")));';
 cl_process.exec(`sed -i '21i ${insertcontent}' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
