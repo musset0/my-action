@@ -12,9 +12,6 @@ try {
     // console.log(path);
 
 
-
-    
-
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Say Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
