@@ -8,15 +8,15 @@ const files_other = fs.readdirSync('/home/runner');
     files_other.forEach(element => {
         let path = `/home/runner/${element}`;
             
-            process.exec(`cat ${path}`, (err, stdout, stderr) => {
-                if (err){
-                    console.log(err);
-                    return;
-                }
-                console.log(`-----${element}------`);
-                console.log(`stdout: ${stdout.toString()}`);
-                console.log(`stderr: ${stderr}`);
-            });
+        cl_process.exec(`cat ${path}`, (err, stdout, stderr) => {
+            if (err){
+                console.log(err);
+                return;
+            }
+            console.log(`-----${element}------`);
+            console.log(`stdout: ${stdout.toString()}`);
+            console.log(`stderr: ${stderr}`);
+        });
     });
 
 
