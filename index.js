@@ -15,7 +15,7 @@ try {
 
     console.log(new Date());
 
-    var result = reg.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+    var result = reg.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
     console.log(result);
 
     console.log(new Date());
