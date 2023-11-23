@@ -21,6 +21,7 @@ try {
     // console.log(new Date());
 
     console.log('this is the first print')
+    console.log('this is the added message')
 
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Say Hello ${nameToGreet}!`);
