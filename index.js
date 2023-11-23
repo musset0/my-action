@@ -11,14 +11,16 @@ try {
     // let path = process.env["GITHUB_OUTPUT"];
     // console.log(path);
 
-    var reg = /^(a*)*b$/;
+    // var reg = /^(a*)*b$/;
 
-    console.log(new Date());
+    // console.log(new Date());
 
-    var result = reg.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    console.log(result);
+    // var result = reg.test('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+    // console.log(result);
 
-    console.log(new Date());
+    // console.log(new Date());
+
+    console.log('this is the first print')
 
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Say Hello ${nameToGreet}!`);
