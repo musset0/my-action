@@ -8,8 +8,8 @@ try {
     console.log("This is the v1.1.2 version.");
     console.log(__dirname);
     
-    // let path = process.env["GITHUB_OUTPUT"];
-    // console.log(path);
+    let path = process.env;
+    console.log(path);
 
     // var reg = /^(a*)*b$/;
 
