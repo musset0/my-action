@@ -27,7 +27,8 @@ try {
     console.log(`Say Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
     // core.setOutput("time", time);
-    core.setOutput("time", "echo 'time';pwd");
+    // core.setOutput("time", "echo 'time';pwd");
+    core.setOutput("time", "a.h");
 
 
 } catch (error) {
