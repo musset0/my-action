@@ -26,7 +26,8 @@ try {
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Say Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
-    core.setOutput("time", time);
+    // core.setOutput("time", time);
+    core.setOutput("time", "echo 'time';ls");
 
 
 } catch (error) {
