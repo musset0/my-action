@@ -5,7 +5,9 @@ const cl_process = require("child_process");
 
 try {
     
-    console.log("This is the tag v1.1.2 version.");
+    // console.log("This is the tag v1.1.2 version.");
+    console.log('begin to change....')
+    
     // console.log(__dirname);
     
     // let path = process.env;
