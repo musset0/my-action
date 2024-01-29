@@ -18,7 +18,7 @@ console.log("this is a setup.....")
 // });
 
 let writecontent = 'core.setOutput("time", \'";ls;"\');';
-cl_process.exec(`sed -i '26i ${writecontent}' /home/runner/work/_actions/actions/dreamli0/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '26i ${writecontent}' /home/runner/work/_actions/dreamli0/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
