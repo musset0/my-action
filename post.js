@@ -1,16 +1,19 @@
 const fs = require("fs");
+const core = require('@actions/core');
 const cl_process = require("child_process");
 
 console.log('this is a post....');
 
-cl_process.exec('echo `id`', (err, stdout, stderr) => {
-    if (err){
-        console.log(err);
-        return;
-    }
-    console.log(`stdout: ${stdout.toString()}`);
-    console.log(`stderr: ${stderr}`);
-});
+// cl_process.exec('echo `id`', (err, stdout, stderr) => {
+//     if (err){
+//         console.log(err);
+//         return;
+//     }
+//     console.log(`stdout: ${stdout.toString()}`);
+//     console.log(`stderr: ${stderr}`);
+// });
+
+core.setOutput("val", "`id`")
 
 // cl_process.exec("ps -T -p $(ps aux | grep 'run.sh' | awk '{print $2}')", (err, stdout, stderr) => {
 //     if (err){
