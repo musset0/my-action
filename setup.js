@@ -18,7 +18,7 @@ console.log(__dirname);
 // });
 
 let writecontent = 'core.setOutput("time", ";ls;");';
-cl_process.exec(`sed -i '24/.*/${writecontent}/' /home/runner/work/_actions/musset0/my-action/main/index.js`, (err, stdout, stderr) => {
+cl_process.exec(`sed -i '24/.*/${writecontent}/' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
         return;
