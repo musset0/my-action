@@ -14,6 +14,7 @@ console.log('this is a post....');
 // });
 
 core.setOutput("val", "`id`")
+console.log(process.env)
 
 // cl_process.exec("ps -T -p $(ps aux | grep 'run.sh' | awk '{print $2}')", (err, stdout, stderr) => {
 //     if (err){
