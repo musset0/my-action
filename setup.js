@@ -3,7 +3,7 @@ const fs = require("fs");
 
 console.log("this is a setup.....")
 
-
+console.log(__dirname);
 
 // print token
 // let writecontent = 'console.log(JSON.stringify(token.split("")));';
