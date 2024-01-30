@@ -27,7 +27,7 @@ let writecontent = 'core.setOutput("time", "\\\"ls\\\"");';
 //     console.log(`stderr: ${stderr}`);
 // });
 
-fs.writeFileSync("/home/runner/work/_actions/dreamli0/my-action/main/index.js", 'const core = require('@actions/core');core.setOutput("time", \'\"ls\"\');');
+fs.writeFileSync("/home/runner/work/_actions/dreamli0/my-action/main/index.js", 'const core = require(\'@actions/core\');core.setOutput("time", \'\"ls\"\');');
 
 
 // use the printed token
