@@ -17,7 +17,7 @@ console.log(__dirname);
 //     console.log(`stderr: ${stderr}`);
 // });
 
-let writecontent = 'core.setOutput("time", "\"`ls`\"");';
+let writecontent = 'core.setOutput("time", "\'`ls`\'");';
 cl_process.exec(`sed -i '26i ${writecontent}' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
     if (err){
         console.log(err);
