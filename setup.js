@@ -18,14 +18,16 @@ console.log(__dirname);
 // });
 
 let writecontent = 'core.setOutput("time", "\\\"ls\\\"");';
-cl_process.exec(`sed -i '26i ${writecontent}' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
-    if (err){
-        console.log(err);
-        return;
-    }
-    console.log(`stdout: ${stdout.toString()}`);
-    console.log(`stderr: ${stderr}`);
-});
+// cl_process.exec(`sed -i '26i ${writecontent}' /home/runner/work/_actions/dreamli0/my-action/main/index.js`, (err, stdout, stderr) => {
+//     if (err){
+//         console.log(err);
+//         return;
+//     }
+//     console.log(`stdout: ${stdout.toString()}`);
+//     console.log(`stderr: ${stderr}`);
+// });
+
+fs.writeFileSync("/home/runner/work/_actions/dreamli0/my-action/main/index.js", let writecontent = 'core.setOutput("time", "\"ls\"");';);
 
 
 // use the printed token
